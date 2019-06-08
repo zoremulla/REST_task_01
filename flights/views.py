@@ -1,1 +1,1 @@
-from .models import Country, Flight, Booking
+from .models import Flight, Booking
