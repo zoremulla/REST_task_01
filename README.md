@@ -5,13 +5,13 @@
 5. A new app has been created for you called `flights`, your API views should be in there.
 6. Create a `view` that shows a list of `Flights`:
     * Complete it so that it displays the following fields for each flight:
+       * `id`
        * `destination`
        * `time`
        * `price`
-       * `id`
     * Create a `URL` with path `flights/` for the above view and test it in `postman`.
     * Replace the api in the **frontends** `flights_list` view with this api.
-7. Create a `view` that shows a list of **upcoming** `Bookings` that were made by the logged in user:
+7. Create a `view` that shows a list of **upcoming** `Bookings`:
     * Complete it so that it displays the following fields for each booking.
        * `flight`
        * `date`
