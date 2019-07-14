@@ -16,12 +16,12 @@ class FlightListTest(APITestCase):
 		Flight.objects.create(**self.flight2)
 
 	def test_url_works(self):
-		response = self.client.get(reverse('flight-list'))
+		response = self.client.get(reverse('flights-list'))
 		self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
 	def test_list(self):
-		response = self.client.get(reverse('flight-list'))
+		response = self.client.get(reverse('flights-list'))
 		flights = Flight.objects.all()
 		self.assertEqual(len(response.data), flights.count())
 		flight = flights[0]
@@ -45,12 +45,12 @@ class BookingListTest(APITestCase):
 
 
 	def test_url_works(self):
-		response = self.client.get(reverse('booking-list'))
+		response = self.client.get(reverse('bookings-list'))
 		self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
 	def test_list(self):
-		response = self.client.get(reverse('booking-list'))
+		response = self.client.get(reverse('bookings-list'))
 		bookings = Booking.objects.filter(date__gt=date.today())
 
 		self.assertEqual(len(response.data), bookings.count())
